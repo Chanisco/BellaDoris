@@ -14,8 +14,6 @@ public class SceneController: Singleton<SceneController> {
 
     IEnumerator Start() {
         _gameController = GameController.Instance;
-        //_saveController = SaveController.Instance;
-        //_configController = ConfigController.Instance;
         _eventController = EventController.Instance;
         while (LoadingUI.OnAppear() == false) {
             yield return new WaitForEndOfFrame();
@@ -39,21 +37,15 @@ public class SceneController: Singleton<SceneController> {
             LoadingUI.ownImage.fillAmount = 1;
             SceneManager.UnloadSceneAsync(currentScene);
         }
-         /*if (_saveController.GetBoolValue(SAVED_OBJECTS.ACCEPTED_TERMS) == false) {
-              StartCoroutine(AddSceneWithoutLoadin("PrivacyScene"));
-         }
-         else {
-             CheckupMain();
-         }*/
-        CheckupMain();
+        CheckupInitUI();
     }
 
     #region allCheckUps
-    public void CheckupMain() {
+    public void CheckupInitUI() {
         if (currentScene != string.Empty) {
             SceneManager.UnloadSceneAsync(currentScene);
         }
-        StartCoroutine(AddScene("Main"));
+        StartCoroutine(AddScene("InitUI"));
     }
 
     public void CheckupFeedback() {
