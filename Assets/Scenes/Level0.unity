@@ -462,7 +462,7 @@ MonoBehaviour:
   - {fileID: 1206657227}
   - {fileID: 1272117094}
   - {fileID: 1065103589}
-  cameraObject: {fileID: 0}
+  cameraObject: {fileID: 217882967}
 --- !u!114 &72515277 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4494626109825467872, guid: 95499c189a2f2da419f9ececf299ab1a, type: 3}
@@ -1007,6 +1007,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521491786}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &530359721
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 1
+    - _Z: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &542475973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,8 +1961,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902489217}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.2, y: 0.55, z: 0.43}
-  m_LocalScale: {x: 0.1, y: 2, z: 3.8737}
+  m_LocalPosition: {x: 4.08, y: -0.72, z: 2.9166}
+  m_LocalScale: {x: 0.1, y: 2, z: 2.2407248}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -1992,6 +2024,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0873fe6365e464346b381157da290231, type: 3}
+--- !u!21 &973809141
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 1
+    - _Z: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &982230883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3108,38 +3172,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6026382792192874002, guid: b46061fe16df08b4f835f3700782316e, type: 3}
   m_PrefabInstance: {fileID: 1352265521}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1424640066
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 1
-    - _Z: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &1439077627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3278,7 +3310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   step: 0
   bookSlot: {fileID: 7583512445602390019}
-  VisualText: {fileID: 0}
+  VisualText: {fileID: 731988018}
   InvisibleWall: {fileID: 858034962}
   characterclass: {fileID: 72515277}
 --- !u!4 &1524134691
@@ -4266,38 +4298,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6026382792192874002, guid: b46061fe16df08b4f835f3700782316e, type: 3}
   m_PrefabInstance: {fileID: 749324117}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1857890754
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 1
-    - _Z: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!4 &1877714172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6026382792192874002, guid: b46061fe16df08b4f835f3700782316e, type: 3}
@@ -4937,11 +4937,11 @@ PrefabInstance:
     - target: {fileID: 7623015350439738010, guid: 95499c189a2f2da419f9ececf299ab1a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1424640066}
+      objectReference: {fileID: 530359721}
     - target: {fileID: 7623015351725821873, guid: 95499c189a2f2da419f9ececf299ab1a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1857890754}
+      objectReference: {fileID: 973809141}
     - target: {fileID: 7623015351813838027, guid: 95499c189a2f2da419f9ececf299ab1a, type: 3}
       propertyPath: m_RootOrder
       value: 5
