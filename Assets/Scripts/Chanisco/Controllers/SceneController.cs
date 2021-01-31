@@ -47,7 +47,7 @@ public class SceneController: Singleton<SceneController> {
         if (currentScene != string.Empty) {
             SceneManager.UnloadSceneAsync(currentScene);
         }
-        StartCoroutine(AddScene("VoidRoom"));
+        StartCoroutine(AddScene("Level0"));
     }
 
     public void CheckupLevel(string levelName)
