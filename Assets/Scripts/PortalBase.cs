@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PortalBase : UsableObject
 {
-    public SceneController _sceneController;
+    private SceneController _sceneController;
     public string levelName;
     public bool passingThePortal;
     private void OnEnable()
