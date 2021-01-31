@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterBelladoris : CharacterBase
 {
-    private bool isReading;
+    public bool isReading;
     public void StartReadingAnimation()
     {
         animator.SetBool("Reading", true);
@@ -31,11 +31,11 @@ public class CharacterBelladoris : CharacterBase
     {
         while (isReading == true)
         {
-            if (Input.anyKeyDown && !(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2)))
+            if (Input.anyKey && !(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2)))
             {
                 animator.SetBool("Reading", false);
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForEndOfFrame();
         }
 
     }

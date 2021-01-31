@@ -33,6 +33,7 @@ public class PickableObjectSlot : MonoBehaviour
         obj.transform.localPosition = Vector3.zero;
         obj.transform.eulerAngles = positionToDropItem.eulerAngles;
         objectInSlot = obj.GetComponent<PickableObjectBase>();
+        objectInSlot.OnPlaceObject();
         obj.SetActive(true);
     }
 

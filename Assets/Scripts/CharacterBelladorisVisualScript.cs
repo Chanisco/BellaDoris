@@ -8,6 +8,7 @@ public class CharacterBelladorisVisualScript : MonoBehaviour
 
     public CharacterBase Head;
     public GameObject VisualobjectInHand;
+    public GameObject ActualItemInHand;
 
     public void AnimationThatMakesStatic()
     {
@@ -20,10 +21,12 @@ public class CharacterBelladorisVisualScript : MonoBehaviour
     public void RemoveItemInHandVisual()
     {
         VisualobjectInHand.SetActive(false);
+        ActualItemInHand.SetActive(true);
     }
     public void AddItemInHandVisual()
     {
         VisualobjectInHand.SetActive(true);
+        ActualItemInHand.SetActive(false);
     }
 
     private void OnEnable()

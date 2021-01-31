@@ -32,6 +32,6 @@ public class PortalBase : UsableObject
     public IEnumerator ChangeLevelAfterDelay()
     {
         yield return new WaitForSeconds(1);
-        _sceneController.CheckupLevel("InitUI");
+        _sceneController.CheckupLevel(levelName);
     }
 }
