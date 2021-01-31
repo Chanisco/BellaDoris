@@ -6,18 +6,30 @@ using System;
 public class EventController : Singleton<EventController> {
 
 
-    /*public event Action<UICheckedCourses> CheckWinnerCardgame;
-    void OnCheckWinnerCardgame(UICheckedCourses criteria)
+    public event Action<int> ChangedRoom;
+    void OnChangedRoom(int roomId)
     {
-        if (CheckWinnerCardgame != null)
+        if (ChangedRoom != null)
         {
-            CheckWinnerCardgame(criteria);
+            ChangedRoom(roomId);
         }
     }
-    public void CheckWinnerCardgameCall(UICheckedCourses criteria)
+    public void OnChangedRoomCall(int roomId)
     {
-        OnCheckWinnerCardgame(criteria);
+        OnChangedRoom(roomId);
     }
-    */
+
+    public event Action<Transform> ChangedRoomTransform;
+    void OnChangedRoomTransform(Transform roomId)
+    {
+        if (ChangedRoomTransform != null)
+        {
+            ChangedRoomTransform(roomId);
+        }
+    }
+    public void OnChangedRoomTransformCall(Transform roomId)
+    {
+        OnChangedRoomTransform(roomId);
+    }
 
 }

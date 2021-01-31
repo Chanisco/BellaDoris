@@ -14,9 +14,9 @@ public class LightSwitch : UsableObject
 
 
 
-    public override void OnUseItem()
+    public override void OnUseItem(CharacterBase characterUsingObject)
     {
-        base.OnUseItem();
+        base.OnUseItem(characterUsingObject);
         StopCoroutine("TurnLight");
         if (LightActive == true)
         {

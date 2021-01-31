@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickableObjectSlot : MonoBehaviour
 {
     public PickableObjectBase objectInSlot;
-
+    public Transform positionToDropItem;
     public bool PickObjectRequest()
     {
         if (objectInSlot == null)
@@ -29,8 +29,9 @@ public class PickableObjectSlot : MonoBehaviour
 
     public void OnDropItem(GameObject obj)
     {
-        obj.transform.SetParent(transform);
+        obj.transform.SetParent(positionToDropItem);
         obj.transform.localPosition = Vector3.zero;
+        obj.transform.eulerAngles = positionToDropItem.eulerAngles;
         objectInSlot = obj.GetComponent<PickableObjectBase>();
         obj.SetActive(true);
     }

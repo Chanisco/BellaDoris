@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/InitUI.unity
     guid: c1b259ddbb33e5e4184887b5379f8e2f
   - enabled: 1
-    path: Assets/Scenes/TestRoom.unity
-    guid: a06e7df021f7233438f86fd511ab4b1b
+    path: Assets/Scenes/VoidRoom.unity
+    guid: 293f0d08791f09d4989c9dcaf2d606cc
   m_configObjects: {}

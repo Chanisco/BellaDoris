@@ -10,6 +10,7 @@ public class CharacterBase : MonoBehaviour
 
     private CharacterController controller;
     public Animator animator;
+    public bool isStatic = false;
     public float speed = 0.5f;
 
     private void Start()
@@ -22,13 +23,22 @@ public class CharacterBase : MonoBehaviour
         {
             animator = GetComponent<Animator>();
         }
+        Init();
     }
-    void Update()
-    {
-        Movement();
-        PickUpOrDropItem();
-        UseItem();
 
+    public virtual void Init()
+    {
+
+    }
+
+    public virtual void Update()
+    {
+
+    }
+
+    public virtual void StopMovementForAnimationSwitch(bool target)
+    {
+        isStatic = target;
     }
 
     public void Movement()
@@ -51,14 +61,18 @@ public class CharacterBase : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             yMod = speed;
+            animator.SetBool("WalkingForward", false);
+            animator.SetBool("WalkingBack", true);
         }
         if (Input.GetKey(KeyCode.S))
         {
             yMod = -speed;
+            animator.SetBool("WalkingBack", false);
             animator.SetBool("WalkingForward", true);
         }
+        Vector3 targetVector = new Vector3(xMod, 0, yMod);
+        controller.Move(targetVector * Time.deltaTime);
 
-        controller.Move(new Vector3(xMod, 0,yMod) * Time.deltaTime);
 
 
         if (!Input.GetKey(KeyCode.A))
@@ -72,6 +86,10 @@ public class CharacterBase : MonoBehaviour
         if (!Input.GetKey(KeyCode.S))
         {
             animator.SetBool("WalkingForward", false);
+        }
+        if (!Input.GetKey(KeyCode.W))
+        {
+            animator.SetBool("WalkingBack", false);
         }
     }
 
@@ -117,7 +135,6 @@ public class CharacterBase : MonoBehaviour
         }
     }
 
-
     public void UseItem()
     {
         if (objectInMind != null)
@@ -130,7 +147,7 @@ public class CharacterBase : MonoBehaviour
                     UsableObject objectUseScript = objectInMind.GetComponent<UsableObject>();
                     if (objectUseScript.UseObjectRequest() == true)
                     {
-                        objectUseScript.OnUseItem();
+                        objectUseScript.OnUseItem(this);
                     }
 
                 }

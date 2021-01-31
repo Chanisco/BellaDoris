@@ -9,7 +9,7 @@ public class UsableObject : MonoBehaviour
         return true;
     }
 
-    public virtual void OnUseItem()
+    public virtual void OnUseItem(CharacterBase characterUsingObject)
     {
 
     }

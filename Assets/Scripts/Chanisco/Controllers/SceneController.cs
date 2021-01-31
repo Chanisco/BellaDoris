@@ -12,7 +12,9 @@ public class SceneController: Singleton<SceneController> {
     public string currentScene;
 	public HandlerBehaviour targetInitHandler;
 
+    private Camera ownCamera;
     IEnumerator Start() {
+        ownCamera = Camera.main;
         _gameController = GameController.Instance;
         _eventController = EventController.Instance;
         while (LoadingUI.OnAppear() == false) {
@@ -37,39 +39,26 @@ public class SceneController: Singleton<SceneController> {
             LoadingUI.ownImage.fillAmount = 1;
             SceneManager.UnloadSceneAsync(currentScene);
         }
-        CheckupInitUI();
+        CheckupInit();
     }
 
     #region allCheckUps
-    public void CheckupInitUI() {
+    public void CheckupInit() {
         if (currentScene != string.Empty) {
             SceneManager.UnloadSceneAsync(currentScene);
         }
-        StartCoroutine(AddScene("InitUI"));
+        StartCoroutine(AddScene("VoidRoom"));
     }
 
-    public void CheckupFeedback() {
-        if (currentScene != string.Empty) {
+    public void CheckupLevel(string levelName)
+    {
+        if (currentScene != string.Empty)
+        {
             SceneManager.UnloadSceneAsync(currentScene);
         }
-        StartCoroutine(AddScene("Feedback"));
+        StartCoroutine(AddScene(levelName));
     }
 
-    public void CheckupConfig() {
-        if (currentScene != string.Empty) {
-            SceneManager.UnloadSceneAsync(currentScene);
-		}
-		StartCoroutine(AddSceneWithInit("Config"));
-    }
-
-    public void CheckupGame() {
-        //_eventController.GameStartCall();
-        if (currentScene != string.Empty) {
-            SceneManager.UnloadSceneAsync(currentScene);
-        }
-        StartCoroutine("SetupGame");
-
-    }
 
     public void CheckUpResultScreen() {
         if (currentScene != string.Empty) {

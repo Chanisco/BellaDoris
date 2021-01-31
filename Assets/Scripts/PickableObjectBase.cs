@@ -6,7 +6,7 @@ public class PickableObjectBase : MonoBehaviour
 {
     public SpriteRenderer visual;
 
-    public void PickUpObject()
+    public virtual void PickUpObject()
     {
 
     }
