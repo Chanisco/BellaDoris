@@ -8,7 +8,6 @@ public class TutorialHandler : MonoBehaviour
     public PickableObjectSlot bookSlot;
     public GameObject VisualText;
 
-    public GameObject Camera;
     public GameObject InvisibleWall;
     public CharacterBelladoris characterclass;
     private EventController _eventController;
