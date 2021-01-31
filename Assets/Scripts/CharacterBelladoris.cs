@@ -34,6 +34,7 @@ public class CharacterBelladoris : CharacterBase
             if (Input.anyKey && !(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2)))
             {
                 animator.SetBool("Reading", false);
+                isReading = false;
             }
             yield return new WaitForEndOfFrame();
         }
