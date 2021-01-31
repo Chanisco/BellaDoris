@@ -7,7 +7,7 @@ public class CharacterBelladorisVisualScript : MonoBehaviour
     private EventController _eventController;
 
     public CharacterBase Head;
-
+    public GameObject VisualobjectInHand;
 
     public void AnimationThatMakesStatic()
     {
@@ -16,6 +16,14 @@ public class CharacterBelladorisVisualScript : MonoBehaviour
     public void AnimationThatRemovesStatic()
     {
         Head.StopMovementForAnimationSwitch(false);
+    }
+    public void RemoveItemInHandVisual()
+    {
+        VisualobjectInHand.SetActive(false);
+    }
+    public void AddItemInHandVisual()
+    {
+        VisualobjectInHand.SetActive(true);
     }
 
     private void OnEnable()

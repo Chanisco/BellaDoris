@@ -166,10 +166,6 @@ public class CharacterBase : MonoBehaviour
                 Debug.Log("Well we can try to grab this : " + objectInMind.GetComponent<PickableObjectSlot>().objectInSlot.name);
 
             }
-            else
-            {
-                Debug.Log("Lets leave this here");
-            }
         }
         if (other.gameObject.tag == "Useable")
         {
