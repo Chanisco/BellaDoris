@@ -2561,38 +2561,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3851407421780459232, guid: c17a025451d48a444893231002b4d3ee, type: 3}
   m_PrefabInstance: {fileID: 293202904}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &300261658
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 1
-    - _Z: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &316033551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3347,7 +3315,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 300261658}
+  - {fileID: 888821802}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5786,8 +5754,40 @@ Transform:
   - {fileID: 741858236}
   - {fileID: 790980388}
   m_Father: {fileID: 1456004262}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &888821802
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 1
+    - _Z: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &918983737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9956,11 +9956,11 @@ Transform:
   m_Children:
   - {fileID: 477070768}
   - {fileID: 222109374}
+  - {fileID: 885928353}
+  - {fileID: 2119749002}
   - {fileID: 102579114682442399}
   - {fileID: 1688870380}
   - {fileID: 5461689572259750321}
-  - {fileID: 885928353}
-  - {fileID: 2119749002}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14012,7 +14012,7 @@ Transform:
   - {fileID: 233772427}
   - {fileID: 1309337686}
   m_Father: {fileID: 1456004262}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2120693887
 PrefabInstance:
