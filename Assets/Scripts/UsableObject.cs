@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class UsableObject : MonoBehaviour
 {
+    public virtual void Start()
+    {
+        gameObject.tag = "Useable";
+    }
+
     public virtual bool UseObjectRequest()
     {
         return true;

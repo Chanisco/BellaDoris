@@ -33,7 +33,7 @@ public class CharacterBase : MonoBehaviour
 
     public virtual void Update()
     {
-
+        
     }
 
     public virtual void StopMovementForAnimationSwitch(bool target)
@@ -106,6 +106,7 @@ public class CharacterBase : MonoBehaviour
                     if (objectSlotScript.PickObjectRequest(this) == true)
                     {
                         HeldItem = objectSlotScript.objectInSlot;
+                        HeldItem.PickUpObject(this);
                         objectInMind = null;
                         objectSlotScript.OnPickUpItem();
 
