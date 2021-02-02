@@ -6,7 +6,7 @@ public class CharacterBase : MonoBehaviour
 {
     public GameObject objectInMind;
     public PickableObjectBase HeldItem;
-    public SpriteRenderer visualHeldItem;
+    public Transform visualHeldItem;
 
     private CharacterController controller;
     public Animator animator;
@@ -103,15 +103,17 @@ public class CharacterBase : MonoBehaviour
                 {
                     //// if there is an object in the slot pick up the item
                     PickableObjectSlot objectSlotScript = objectInMind.GetComponent<PickableObjectSlot>();
-                    if (objectSlotScript.PickObjectRequest() == true)
+                    if (objectSlotScript.PickObjectRequest(this) == true)
                     {
                         HeldItem = objectSlotScript.objectInSlot;
                         objectInMind = null;
                         objectSlotScript.OnPickUpItem();
-                        HeldItem.gameObject.transform.SetParent(transform);
-                        //Own Visuals showing the object
+
+                        //Own Visuals dropping the object
                         visualHeldItem.gameObject.SetActive(true);
-                        visualHeldItem.sprite = HeldItem.visual.sprite;
+                        HeldItem.gameObject.transform.SetParent(visualHeldItem.transform);
+                        HeldItem.transform.localPosition = Vector3.zero;
+                        HeldItem.gameObject.SetActive(true);
                     }                
                     //// if there is no object in the slot
                     else
@@ -120,11 +122,14 @@ public class CharacterBase : MonoBehaviour
                         {
                             //Own Visuals dropping the object
                             visualHeldItem.gameObject.SetActive(false);
-                            visualHeldItem.sprite = null;
 
-                            objectSlotScript.OnDropItem(HeldItem.gameObject);
-                            HeldItem = null;
-                            objectInMind = null;
+                            if (objectSlotScript.PlaceObjectRequest(this) == true)
+                            {
+                                objectSlotScript.OnDropItem(HeldItem.gameObject);
+                                HeldItem = null;
+                                objectInMind = null;
+
+                            }
 
                         }
                     }

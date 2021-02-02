@@ -35,13 +35,17 @@ public class CameraChangePosition : MonoBehaviour
         while (Vector3.Distance(cameraObject.transform.position, cameraPos.position) > 0.1f)
         {
             Vector3 camPos = cameraObject.transform.position;
+            Vector3 camRot = cameraObject.transform.eulerAngles;
             cameraObject.transform.position = Vector3.Lerp(camPos, cameraPos.position, 0.1f);
-            cameraObject.transform.eulerAngles = cameraPos.transform.eulerAngles;
-            yield return new WaitForSeconds(0.01f);
+            cameraObject.transform.eulerAngles = Vector3.Lerp(camRot, cameraPos.eulerAngles, 0.1f);
+            yield return new WaitForSeconds(0.001f);
 
         }
 
-        cameraObject.transform.position = cameraPos.position;
+        cameraObject.transform.SetParent(cameraPos);
+        cameraObject.transform.localPosition = Vector3.zero;
+        cameraObject.transform.localEulerAngles = Vector3.zero;
         yield break;
     }
+
 }

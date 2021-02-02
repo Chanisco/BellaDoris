@@ -23,6 +23,7 @@ public class PortalBase : UsableObject
         {
             passingThePortal = true;
             base.OnUseItem(characterUsingObject);
+            characterUsingObject.StopMovementForAnimationSwitch(true);
             //characterUsingObject.animator.SetBool("PassingTheGate",true);
             StartCoroutine("ChangeLevelAfterDelay");
 

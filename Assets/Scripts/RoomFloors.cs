@@ -35,7 +35,7 @@ public class RoomFloors : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (InRoom == false)
+        if (InRoom == false && other.tag == "Player")
         {
             _eventController.OnChangedRoomCall(roomId);
         }

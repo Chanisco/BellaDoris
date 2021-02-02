@@ -6,7 +6,7 @@ public class PickableObjectSlot : MonoBehaviour
 {
     public PickableObjectBase objectInSlot;
     public Transform positionToDropItem;
-    public bool PickObjectRequest()
+    public virtual bool PickObjectRequest(CharacterBase t)
     {
         if (objectInSlot == null)
         {
@@ -21,13 +21,26 @@ public class PickableObjectSlot : MonoBehaviour
 
     }
 
-    public void OnPickUpItem()
+    public virtual bool PlaceObjectRequest(CharacterBase t)
+    {
+        if (objectInSlot != null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+
+        }
+    }
+
+    public virtual void OnPickUpItem()
     {
         objectInSlot.gameObject.SetActive(false);
         objectInSlot = null;
     }
 
-    public void OnDropItem(GameObject obj)
+    public virtual void OnDropItem(GameObject obj)
     {
         obj.transform.SetParent(positionToDropItem);
         obj.transform.localPosition = Vector3.zero;
